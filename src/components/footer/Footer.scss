@@ -1,0 +1,46 @@
+.footerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+  .footerContainer > :nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+    .footerSymbol {
+      font-size: 10px;
+      color: rgb(167, 167, 167);
+      font-weight: 700;
+    }
+
+    .appleFlex {
+      display: flex;
+      align-items: center;
+      border-left: 2px solid #8cd3f3;
+      margin-left: -5px;
+      padding:0 10px 0 5px;
+      font-size: 13px;
+    }
+
+  .apple {
+    background-color: #ececec;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footerTitle {
+    font-size: 10px;
+    color: rgb(167, 167, 167);
+  }
+
+  .footerScores {
+    font-size: 13px;
+    font-weight: 700;
+  }

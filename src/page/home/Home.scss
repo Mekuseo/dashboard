@@ -1,0 +1,50 @@
+// .home {
+//   position: relative;
+// }
+
+//   .navbarSetting {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 750px;
+//   }
+
+//   .heroSectionSetting {
+//     position: absolute;
+//     top: 80px;
+//     left: 10px;
+//     width: 750px;
+//   }
+
+//   .portfolioSetting {
+//     position: absolute;
+//     top: 280px;
+//     right: 0;
+//     width: 750px;
+//   }
+.home {
+  background: white;
+  margin: 60px;
+  padding: 30px;
+  border-radius: 30px;
+}
+  .containerBackground {
+    background-color: #FCFCFC;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    // justify-content: space-between;
+    border-radius: 30px;
+    height: 80vh;
+  }
+
+    .containerBackground :nth-child(1) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+
+    .containerBackground :nth-child(2) {
+      grid-row: 1;
+      grid-column: 2 / span 3;
+    }

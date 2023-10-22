@@ -1,0 +1,98 @@
+// @import "../../styles//variables.scss";
+
+// .menu-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   height: 74vh;
+//   gap: 20px;
+//   background-color: $card-bg;
+//   padding: 15px 25px;
+//   border-radius: 30px;
+// }
+
+//   .menu-containerTop {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     gap: 50px;
+//   }
+  
+//     .menuList-top {
+//       display: flex;
+//       gap: 20px;
+//     }
+
+//       .profileDetails > :nth-child(1) {
+//         font-size: 14px;
+//         font-weight: 600;
+//       }
+
+//       .profileDetails > :nth-child(2) {
+//         font-size: 12px;
+//         font-weight: 400;
+//       }
+
+//   .menList-middle {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//     .menuItem {
+//       display: flex;
+//       align-items: center;
+//       gap: 20px;
+//       padding: 10px 0;
+//     }
+
+//       .active {
+//         border-bottom: 2px solid red;
+//         width: 25px;
+//       }
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+  .menu-containerTop {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+  }
+
+    .menuList-top {
+      display: flex;
+      gap: 20px;
+    }
+
+    .profileDetails :nth-child(1) {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .profileDetails :nth-child(2) {
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+  .menuList-middle {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+    .menuItem {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .active {
+      border-bottom: 3px solid red;
+      width: 25px;
+      font-weight: 600;
+    }

@@ -1,0 +1,115 @@
+// @import "../../styles//variables.scss";
+
+// .navbar-container {
+//   background-color: $navbar-bg;
+//   height: 200px;
+//   border-radius: 0 30px;
+//   padding: 30px 40px;
+// }
+
+//   .navbar-items {
+//     display: flex;
+//     justify-content: end;
+//     align-items: center;
+//     gap: 30px;
+//   }
+
+//     .navbar-items :nth-child(2) {
+//       color: #9a9bb1;
+//     }
+
+//     .navbar-items :nth-child(3) {
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       gap: 5px;
+//     }
+
+//     .navbar-bell {
+//       position: relative;
+//     }
+    
+//       .navbar-bell :nth-child(2) {
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         background-color: $menu-hover;
+//         width: 4px;
+//         height: 4px;
+//         border-radius: 50%;
+//       }
+
+//     .plusButton {
+//       background-color: #1b1c34;
+//       border-radius: 50%;
+//       width: 30px;
+//       height: 30px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       cursor: pointer;
+//       color: white;
+//       transition: all ease-in 0.1s;
+//     }
+
+//       .plusButton:hover {
+//         background-color: $menu-hover;
+//       }
+
+.navbar-container {
+  background-color: #F0F1F5;
+  border-radius: 0 30px;
+  width: 100%;
+  height: 250px;
+  padding: 30px;
+}
+
+  .navbar-items {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+  }
+
+    .navbar-items :nth-child(2) {
+      color: #9a9bb1;
+    }
+
+    .navbar-items :nth-child(3) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .navbar-bell {
+      position: relative;
+    }
+    
+      .navbar-bell :nth-child(2) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: red;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+      }
+
+    .plusButton {
+      background-color: #1b1c34;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: white;
+      transition: all ease-in 0.1s;
+    }
+
+      .plusButton:hover {
+        background-color: red;
+  }

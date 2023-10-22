@@ -1,0 +1,57 @@
+.portfolioSection-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+}
+
+.PortfolioContainer-cards {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+  .portfolioCard {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+    .dateUnderline {
+      border: 2px solid rgb(180, 180, 180);
+      width: 30%;
+      margin-top: 5px;
+    }
+
+  .chart {
+    width: 150px;
+    height: 120px;
+  }
+
+  .portfolioData :nth-child(1) {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .portfolioData :nth-child(2) {
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(65, 64, 64);
+  }
+
+  .portfolioData :nth-child(3) {
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .portfolioPercent {
+    display: flex;
+    align-items: center;
+  }
+
+  .recharts-surface {
+    background-color: transparent;
+  }
+
+  // 21B4B1
