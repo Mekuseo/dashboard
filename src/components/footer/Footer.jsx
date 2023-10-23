@@ -5,7 +5,7 @@ import "./Footer.scss";
 const footerData = [
   {
     title: "PRICE",
-    price: "= $234.00",
+    price: "$234.00",
   },
   {
     title: "% RETURN",
@@ -13,27 +13,27 @@ const footerData = [
   },
   {
     title: "PRICE",
-    price: "= $234.00",
+    price: "$234.00",
   },
   {
     title: "TOTAL NET COST",
-    price: "= $1 234.00",
+    price: "$1 234.00",
   },
   {
     title: "MARKET VALUE",
-    price: "= $1 345.87",
+    price: "$1 345.87",
   },
   {
     title: "TOTAL GAIN",
-    price: "= $456.34",
+    price: "$456.34",
   },
   {
     title: "DAILY GAIN",
-    price: "= -$3.45",
+    price: "-$3.45",
   },
   {
     title: "% PORTFOLIO",
-    price: "= $13.45",
+    price: "$13.45",
   },
 ];
 

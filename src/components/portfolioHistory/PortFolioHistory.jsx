@@ -1,34 +1,21 @@
-import React from "react";
 import "./PortFolioHistory.scss";
 import { LineChart, Line, ResponsiveContainer, Tooltip } from "recharts";
 import arrowDown from "../../asset/images/arrowDown.svg";
 import arrowUp from "../../asset/images/arrow-small-up.svg";
-import { PieChart, Pie, Sector, Cell } from "recharts";
+import PieChartBox from "../PieChartBox";
 
 const generateRandomData = () => {
-  // Generate random data for the LineChart
   const data = [];
   for (let i = 1; i <= 5; i++) {
     data.push({
       name: `Page ${i}`,
-      uv: Math.random() * 5000, // Change these values to generate random data
+      uv: Math.random() * 5000,
       pv: Math.random() * 3000,
       amt: Math.random() * 3000,
     });
   }
   return data;
 };
-
-const pieChartData = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 },
-  { name: "Group E", value: 200 },
-  { name: "Group F", value: 200 },
-  { name: "Group G", value: 200 },
-];
-const COLORS = ["#B731F3", "#00AAA7", "#B2DFBA", "#FF8042", "#FB5253", "#F291F5", "#FEBD2E"];
 
 const portfolioData = [
   {
@@ -70,7 +57,7 @@ const PortFolioHistory = () => {
           );
           const isPositive = percentageChange >= 0;
           const arrowImage = isPositive ? arrowUp : arrowDown;
-          const valueColor = isPositive ? "green" : "red";
+          const valueColor = isPositive ? "#21B4B1" : "red";
 
           return (
             <div key={index}>
@@ -78,7 +65,7 @@ const PortFolioHistory = () => {
                 <div>{item.date}</div>
                 <div className="dateUnderline"></div>
                 <div className="chart">
-                  <ResponsiveContainer width="100%" height={100}>
+                  <ResponsiveContainer>
                     <LineChart data={chartData}>
                       <Line
                         type="monotone"
@@ -86,7 +73,7 @@ const PortFolioHistory = () => {
                         stroke="#8884d8"
                         strokeWidth={2}
                       />
-                    <Tooltip />
+                      <Tooltip />
                     </LineChart>
                   </ResponsiveContainer>
                 </div>
@@ -100,7 +87,10 @@ const PortFolioHistory = () => {
                         alt="arrow"
                         style={{ width: "15px" }}
                       />
-                      <span style={{ color: valueColor, fontSize: "12px" }}>
+                      <span
+                        style={{ color: valueColor, fontSize: "12px" }}
+                        className="percentScore"
+                      >
                         {item.portfolioChangePercentage}
                       </span>
                     </div>
@@ -110,29 +100,17 @@ const PortFolioHistory = () => {
             </div>
           );
         })}
-        <div style={{ backgroundColor: "blue", borderRadius:"20px", marginBottom:"15px", position:"relative" }}>
-          <PieChart width={300} height={240}>
-            <Pie
-              data={pieChartData}
-              cx={140}
-              cy={110}
-              innerRadius={60}
-              outerRadius={70}
-              fill="#8884d8"
-              dataKey="value"
-              cursor="pointer"
-            >
-              {pieChartData.map((entry, index) => (
-                <Cell
-                  key={`cell-${index}`}
-                  fill={COLORS[index % COLORS.length]}
-                />
-              ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
-          <div style={{position:"absolute", top:"90px", left:"100px", color: "white", textAlign:"center"}}><span style={{fontWeight:"700", fontSize:"20px"}}>07</span> <br />INDUSTRIES</div>
-        </div>
+      </div>
+      <div
+        style={{
+          backgroundColor: "blue",
+          borderRadius: "20px",
+          marginBottom: "15px",
+          position: "relative",
+        }}
+        className="pieStyle"
+      >
+        <PieChartBox />
       </div>
     </div>
   );

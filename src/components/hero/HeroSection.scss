@@ -1,112 +1,3 @@
-// .hero-container {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 10px;
-// }
-
-//   .heroCard-left {
-//     width: 200px;
-//     height: 180px;
-//     border-radius: 20px;
-//     background-color: white;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: space-evenly;
-//     padding: 10px 15px;
-//   }
-
-//     .heroCard-left :nth-child(1) {
-//       text-align: center;
-//       font-size: 15px;
-//       font-weight: 600;
-//     }
-
-//     .heroCard-left :nth-child(2) {
-//       margin-left: 80px;
-//       font-size: 10px;
-//     }
-
-//     .heroImage {
-//       position: absolute;
-//       width: 130px;
-//       left: 30px;
-//       bottom: -10px;
-//     }
-
-//     .heroCard-left :nth-child(3) {
-//       background-color: #1b1c34;
-//       width: 50px;
-//       margin-left: 120px;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//       border-radius: 5px;
-//       padding: 5px 0;
-//     }
-  
-//     .recharts-default-legend {
-//       margin-bottom: 10px !important;
-//       padding-left: 30px !important;
-//     }
-
-//     .recharts-surface {
-//       background-color: white;
-//       border-radius: 15px;
-//     }
-
-//     .chartBackground {
-//       background-color: white;
-//       border-radius: 15px;
-//       padding: 10px;
-//       width: 450px;
-//       height: 180px;
-//       position: relative;
-//     }
-
-//       .chartTitle {
-//         display: flex;
-//         align-items: center;
-//         justify-content: space-between;
-//       }
-
-//         .chartTitle > ul {
-//           display: flex;
-//           align-items: center;
-//           gap: 20px;
-//           margin-left: 20px;
-//         }
-
-//           .chartTitle > ul > li {
-//             list-style: none;
-//             font-size: 12px;
-//             font-weight: 600;
-//             color: #9a9bb1;
-//           }
-
-//           .chartTitle > ul > li:nth-child(1) {
-//             border: 1px solid black;
-//             padding: 3px 5px;
-//             border-radius: 7px;
-//           }
-
-//       .heroPortfolioValue {
-//         position: absolute;
-//         z-index: 2;
-//         top: 30px;
-//         right: 40px;
-//       }
-
-//         .heroPortfolioValue :nth-child(2) {
-//           font-weight: 600;
-//           font-size: 25px;
-//           color: #6b6b6b;
-//         }
-
-//         .heroPortfolioValue :nth-child(3) {
-//           font-weight: 600;
-//           color: #5bd6d4;
-//         }
 
 .hero-container {
   display: grid;
@@ -150,9 +41,9 @@
 
     .heroCard-left :nth-child(4) {
       position: absolute;
-      top: 35px;
-      left: -35px;
-      width: 20%;
+      top: 245px;
+      left: 490px;
+      width: 11%;
     }
 
   .chartBackground {
@@ -191,8 +82,8 @@
     .heroPortfolioValue {
       position: absolute;
       z-index: 2;
-      top: 30px;
-      right: 95px;
+      top: 220px;
+      right: 175px;
     }
 
       .heroPortfolioValue :nth-child(2) {
@@ -207,11 +98,163 @@
       }
 
       .recharts-default-legend {
-              margin-bottom: 10px !important;
-              padding-left: 30px !important;
-            }
-        
-            .recharts-surface {
-              background-color: white;
-              border-radius: 15px;
-            }
+        margin-bottom: 10px !important;
+        padding-left: 30px !important;
+      }
+  
+      .recharts-surface {
+        background-color: white;
+        border-radius: 15px;
+      }
+
+@media (max-width: 1281px) {
+  .heroCard-right {
+    width: 99%;
+  }
+
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .chartBackground {
+    grid-column: 1 / span 2;
+  }
+
+  .heroPortfolioValue {
+    position: absolute;
+    top: 250px;
+    right: 155px;
+  }
+
+  .heroCard-left :nth-child(1) {
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .heroCard-left :nth-child(2) {
+    margin-left: 70px;
+    font-size: 10px;
+  }
+
+  .heroCard-left :nth-child(4) {
+    top: 289px;
+    left: 470px;
+    width: 11%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heroCard-right {
+    width: 105%;
+  }
+
+  .hero-container {
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .chartBackground {
+    grid-column: 1 / span 2;
+  }
+
+  .heroCard-left :nth-child(1) {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .heroCard-left :nth-child(2) {
+    margin-left: 40px;
+    font-size: 9px;
+  }
+
+  .heroCard-left :nth-child(3) {
+    border-radius: 3px;
+  }
+
+  .heroCard-left :nth-child(4) {
+    top: 315px;
+    left: 330px;
+    width: 11%;
+  }
+
+  .heroPortfolioValue {
+    position: absolute;
+    top: 280px;
+    right: 165px;
+  }
+
+    .heroPortfolioValue :nth-child(1) {
+      font-weight: 600;
+      font-size: 14px;
+      color: #6b6b6b;
+    }
+    .heroPortfolioValue :nth-child(2) {
+      font-weight: 600;
+      font-size: 18px;
+      color: #6b6b6b;
+    }
+
+    .heroPortfolioValue :nth-child(3) {
+      font-size: 10px;
+      font-weight: 700;
+      color: #5bd6d4;
+    }
+}
+
+@media (max-width: 767px) {
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heroCard-right {
+    width: 100%;
+  }
+
+  .heroCard-left :nth-child(4) {
+    top: 315px;
+    left: 330px;
+    width: 0;
+  }
+
+  .heroCard-left {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .heroCard-left :nth-child(2) {
+    margin-left: 0;
+    font-size: 9px;
+  }
+
+  .heroCard-left :nth-child(3) {
+    border-radius: 8px;
+  }
+
+  .heroPortfolioValue {
+    position: absolute;
+    top: 350px;
+    right: 180px;
+  }
+
+  .chartBackground {
+    border-radius: 10px;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .heroPortfolioValue {
+    position: absolute;
+    top: 390px;
+    right: 120px;
+  }
+}

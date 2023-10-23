@@ -25,14 +25,20 @@
     }
 
   .chart {
-    width: 150px;
-    height: 120px;
+    width: 140px;
+    height: 80px;
   }
 
   .portfolioData :nth-child(1) {
     font-size: 12px;
     font-weight: 500;
   }
+
+  
+  .MuiChartsLegend-root {
+    display: none !important;
+  }
+  
 
   .portfolioData :nth-child(2) {
     font-size: 25px;
@@ -54,4 +60,136 @@
     background-color: transparent;
   }
 
-  // 21B4B1
+  @media (max-width: 1281px) {
+    .chart {
+      width: 110px;
+      height: 90px;
+    }
+
+    .portfolioData :nth-child(2) {
+      font-size: 15px;
+      font-weight: 600;
+      color: rgb(65, 64, 64);
+    }
+
+    .portfolioData :nth-child(1),
+    .portfolioData :nth-child(3) {
+      font-size: 8px;
+      font-weight: 500;
+    }
+
+    .percentScore {
+      font-size: 9px !important;
+    }
+
+    .pieStyle {
+      width: 190px;
+      height: 188px;
+    }
+
+    .pieLabel {
+      top: 60px !important;
+      left: 45px !important;
+    }
+
+}
+
+@media (max-width: 1024px) {
+  .chart {
+    width: 80px;
+    height: 55px;
+  }
+
+  .portfolioData :nth-child(2) {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(65, 64, 64);
+  }
+
+  .portfolioData :nth-child(1),
+  .portfolioData :nth-child(3) {
+    font-size: 8px;
+    font-weight: 500;
+  }
+
+  .percentScore {
+    font-size: 8px !important;
+  }
+
+  .portfolioContainer {
+    position: relative !important;
+  }
+
+  .pieStyle {
+    position: absolute !important;
+    top: 40px;
+    left: 360px;
+    width: 170px;
+    height: 150px;
+  }
+
+  .pieLabel {
+    top: 60px !important;
+    left: 45px !important;
+  }
+
+  .portfolioCard :nth-child(1) {
+    font-size: 10px;
+  }
+
+  .portfolioSection-title {
+    margin: 30px 0 30px;
+  }
+
+  .portfolioSection-title :nth-child(1),
+  .portfolioSection-title :nth-child(2) {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .portfolioContainer-cards {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .pieStyle {
+    width: 379px;
+    height: 200px;
+    display: block;
+  }
+  
+  .piechartBox-tabView {
+    width: 400px;
+    height: 300px;
+  }
+
+  .portfolioSection-title {
+    margin: 10px 0;
+  }
+
+  .chart {
+    width: 90px;
+    height: 55px;
+  }
+
+  .pieLabel {
+    display: none;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .chart {
+    width: 80px;
+    height: 55px;
+  }
+
+  .pieStyle {
+    width: 380px;
+    height: 200px;
+    display: block;
+  }
+
+}

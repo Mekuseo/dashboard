@@ -5,7 +5,7 @@ import Footer from "../footer/Footer";
 
 const ChartPortfolio = () => {
   return (
-    <div style={{marginRight:"30px", marginLeft:"-7px"}}>
+    <div style={{marginRight:"30px", marginLeft:"100px"}} className="chartportfolioContainer">
       <HeroSection />
       <PortFolioHistory />
       <Footer />

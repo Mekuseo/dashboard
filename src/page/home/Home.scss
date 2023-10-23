@@ -1,50 +1,64 @@
-// .home {
-//   position: relative;
-// }
-
-//   .navbarSetting {
-//     position: absolute;
-//     top: 0;
-//     right: 0;
-//     width: 750px;
-//   }
-
-//   .heroSectionSetting {
-//     position: absolute;
-//     top: 80px;
-//     left: 10px;
-//     width: 750px;
-//   }
-
-//   .portfolioSetting {
-//     position: absolute;
-//     top: 280px;
-//     right: 0;
-//     width: 750px;
-//   }
 .home {
   background: white;
   margin: 60px;
   padding: 30px;
   border-radius: 30px;
 }
-  .containerBackground {
-    background-color: #FCFCFC;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 20px;
-    // justify-content: space-between;
-    border-radius: 30px;
-    height: 80vh;
+
+.bodyContentFloat {
+  margin: -150px 0 0 30px;
+}
+
+.containerBackground {
+  background-color: #fcfcfc;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  // justify-content: space-between;
+  border-radius: 30px;
+  height: 80vh;
+}
+
+.containerBackground :nth-child(1) {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.containerBackground :nth-child(2) {
+  grid-row: 1;
+  grid-column: 2 / span 3;
+}
+
+@media (max-width: 1024px) {
+  .bodyContentFloat {
+    top: 80px !important;
   }
+}
 
-    .containerBackground :nth-child(1) {
-      grid-row: 1;
-      grid-column: 1;
-    }
+@media (max-width: 767px) {
+  .containerBackground {
+    height: 100%;
+  }
+}
 
-    .containerBackground :nth-child(2) {
-      grid-row: 1;
-      grid-column: 2 / span 3;
+@media (max-width: 480px) {
+  .home {
+    background: white;
+    margin: 0;
+    padding: 30px;
+    border-radius: 30px;
+    border-radius: 0;
+
+    .containerBackground {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+
+      .bodyContentFloat {
+        margin: -180px 0 0 30px;
+      }
     }
+  }
+}

@@ -70,7 +70,7 @@ const Menu = () => {
 
         </div>
       </div>
-      <div className="menuItem">
+      <div className="menuItem logout">
         <img src={logout} alt="logout" style={{ width: "15px" }} />
         <Link to='/'>Logout</Link>
       </div>

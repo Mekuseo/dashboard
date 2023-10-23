@@ -5,9 +5,9 @@ import ChartPortfolio from "../chartPortfolio/ChartPortfolio";
 const BodyContent = () => {
   return (
     <div>
-      <div style={{ position: "relative" }}>
+      <div>
         <Navbar />
-        <div style={{ position: "absolute", top: "100px", left: "50px" }}>
+        <div className="bodyContentFloat">
           <ChartPortfolio />
         </div>
       </div>
