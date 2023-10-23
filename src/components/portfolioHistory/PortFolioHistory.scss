@@ -5,6 +5,11 @@
   margin: 20px 0 20px 0;
 }
 
+.PiechartPosition {
+  margin-top: -200px;
+  margin-left: 200px;
+}
+
 .PortfolioContainer-cards {
   display: flex;
   align-items: center;
@@ -92,12 +97,22 @@
       left: 45px !important;
     }
 
+    .PiechartPosition {
+      margin-top: -200px;
+      margin-left: 150px;
+    }
+
 }
 
 @media (max-width: 1024px) {
   .chart {
     width: 80px;
     height: 55px;
+  }
+
+  .PiechartPosition {
+    margin-top: -165px;
+    margin-left: 50px;
   }
 
   .portfolioData :nth-child(2) {
@@ -152,6 +167,11 @@
   .portfolioContainer-cards {
     display: flex !important;
     flex-direction: column !important;
+  }
+
+  .PiechartPosition {
+    margin-top: 0;
+    margin-left: -230px;
   }
 
   .pieStyle {

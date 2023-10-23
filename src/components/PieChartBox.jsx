@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import * as React from "react";
 import { PieChart } from "@mui/x-charts/PieChart";
-import { useDrawingArea } from "@mui/x-charts/hooks";
 import { styled } from "@mui/material/styles";
 
 const data = [
@@ -10,51 +9,32 @@ const data = [
   { value: 20, label: "D" },
 ];
 
-const initialSize = {
-  width: 450,
-  height: 200,
+const chartSize = {
+  width: 900, // Set your desired width here
+  height: 150, // Set your desired height here
 };
 
-function PieCenterLabel({ children }) {
-  const { width, height, left, top } = useDrawingArea();
-  return (
-    <StyledText x={left + width / 2} y={top + height / 2}>
-      {children}
-    </StyledText>
-  );
-}
-
 const StyledText = styled("text")({
-  fill: "white",
+  fill: "black",
   textAnchor: "middle",
   dominantBaseline: "central",
   fontSize: 20,
 });
 
-const PieChartBox = () => {
-  const [size, setSize] = React.useState(initialSize);
-
-  const updateSize = () => {
-    if (window.innerWidth <= 1024) {
-      setSize({ width: 300, height: 100 });
-    } else {
-      setSize(initialSize);
-    }
-  };
-
-  useEffect(() => {
-    updateSize();
-    window.addEventListener("resize", updateSize);
-    return () => {
-      window.removeEventListener("resize", updateSize);
-    };
-  }, []);
-
+function PieCenterLabel({ children }) {
   return (
-    <PieChart series={[{ data, innerRadius: 80 }]}>
-      <PieCenterLabel>07 Companies</PieCenterLabel>
-    </PieChart>
+    <StyledText x={chartSize.width / 2} y={chartSize.height / 2}>
+      {children}
+    </StyledText>
   );
-};
+}
 
-export default PieChartBox;
+export default function PieChartBox() {
+  return (
+    <div style={{ width: chartSize.width, height: chartSize.height }}>
+      <PieChart series={[{ data }]} width={chartSize.width} height={chartSize.height}>
+        <PieCenterLabel>07 Companies</PieCenterLabel>
+      </PieChart>
+    </div>
+  );
+}

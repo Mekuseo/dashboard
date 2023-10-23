@@ -101,17 +101,7 @@ const PortFolioHistory = () => {
           );
         })}
       </div>
-      <div
-        style={{
-          backgroundColor: "blue",
-          borderRadius: "20px",
-          marginBottom: "15px",
-          position: "relative",
-        }}
-        className="pieStyle"
-      >
-        <PieChartBox />
-      </div>
+      <div className="PiechartPosition"><PieChartBox /></div>
     </div>
   );
 };
